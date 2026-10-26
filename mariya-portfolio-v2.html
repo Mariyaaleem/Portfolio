@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mariya | AI-Powered Data Analyst</title>
+<style>
+:root{--bg:#f4f1ea;--card:#fff;--tx:#161a2e;--mu:#5f647d;--bd:#e4dfd3;--a:#2f5bea;--b:#ff6b4a;--c:#12a578;--d:#f5b700;--e:#8b5cf6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1120;--card:#181c33;--tx:#f0f1fa;--mu:#a0a6c4;--bd:#2b3050}}
+:root[data-theme="dark"]{--bg:#0e1120;--card:#181c33;--tx:#f0f1fa;--mu:#a0a6c4;--bd:#2b3050}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--bd);display:flex;gap:6px;overflow-x:auto;padding:10px 16px}
+nav a{color:var(--tx);text-decoration:none;font-weight:600;font-size:14px;padding:6px 12px;border-radius:99px;white-space:nowrap}
+nav a:hover{background:var(--card)}
+.w{max-width:1000px;margin:auto;padding:0 18px}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;padding:30px 0}
+@media(max-width:720px){.hero{grid-template-columns:1fr}}
+.blk{border-radius:24px;padding:28px}
+.h1{background:var(--a);color:#fff}
+.h1 h1{font-size:clamp(40px,9vw,72px);line-height:1;margin:8px 0}
+.h1 p{max-width:480px;opacity:.95}
+.pill{display:inline-block;background:rgba(255,255,255,.2);padding:4px 12px;border-radius:99px;font-size:13px;font-weight:600}
+.h2b{background:var(--d);color:#2a2000;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.stat b{font-size:34px;display:block;line-height:1}
+.btn{display:inline-block;padding:10px 18px;border-radius:12px;background:var(--tx);color:var(--bg);text-decoration:none;font-weight:700;margin:6px 8px 0 0;font-size:15px;border:0;cursor:pointer}
+.btn.o{background:transparent;color:inherit;border:2px solid currentColor}
+h2{font-size:28px;margin:52px 0 6px}
+h2 span{color:var(--b);font-size:15px;display:block;letter-spacing:.1em;text-transform:uppercase}
+.mu{color:var(--mu);font-size:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.ctl{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0}
+.ctl div{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ctl label{font-size:13px;color:var(--mu);font-weight:600;margin-right:4px}
+.f{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:5px 12px;border-radius:99px;cursor:pointer;font-size:13px}
+.f.on{background:var(--a);color:#fff;border-color:var(--a)}
+.kpi b{font-size:30px;display:block}
+.row{display:grid;grid-template-columns:90px 1fr 56px;gap:8px;align-items:center;font-size:13px;margin:7px 0;cursor:pointer}
+.tr{background:var(--bd);border-radius:99px;height:14px;overflow:hidden}.tr i{display:block;height:100%;border-radius:99px;transition:width .5s}
+.row.sel .lb{font-weight:800;color:var(--a)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+.hm td,.hm th{padding:0;text-align:center}
+.hm td div{padding:14px 4px;margin:2px;border-radius:8px;cursor:pointer;font-weight:700;font-size:13px;border:2px solid transparent}
+.hm td div.sel{border-color:var(--tx)}
+.hm th{font-size:12px;color:var(--mu);padding:4px}
+.ins{border-left:5px solid var(--c);background:var(--card);padding:14px 18px;border-radius:12px;margin-top:14px}
+.exp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.exp .card b{font-size:30px;display:block}
+textarea{width:100%;min-height:110px;font:13px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:10px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx)}
+.res div{padding:6px 10px;border-radius:8px;margin:4px 0;font-size:13px}
+.res .ok{background:rgba(18,165,120,.16)}.res .er{background:rgba(255,107,74,.2)}
+.proj{border-top:6px solid var(--a)}.proj h3{margin:0 0 4px;font-size:18px}.proj ul{padding-left:18px;margin:8px 0 0;color:var(--mu);font-size:14px}
+.tl{border-left:3px solid var(--bd);margin-left:6px;padding-left:18px}.tl>div{margin-bottom:18px;position:relative}
+.tl>div:before{content:"";position:absolute;left:-26px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--b)}
+.sk span{display:inline-block;margin:4px 6px 4px 0;padding:6px 14px;border-radius:99px;font-weight:700;font-size:13px;color:#fff}
+footer{margin:60px 0 40px;color:var(--mu);font-size:14px}
+</style>
+</head>
+<body>
+<nav><a href="#top">Home</a><a href="#case">Live case study</a><a href="#exp">Experiment</a><a href="#dq">Data quality</a><a href="#work">Experience</a><a href="#proj">Projects</a><a href="#learn">Learning</a><a href="#contact">Contact</a></nav>
+<div class="w" id="top">
+<header class="hero">
+  <div class="blk h1">
+    <span class="pill">Open to Abu Dhabi · Dubai · Remote</span>
+    <h1>Mariya</h1>
+    <p>AI-powered Data Analyst who cleans, validates and models business data with Excel, SQL and Power BI, uses Generative AI to move faster (with manual checks on every output), and turns it all into dashboards people can trust and act on.</p>
+    <a class="btn" href="#case">Explore live dashboard</a><a class="btn o" href="#contact">Hire me</a>
+  </div>
+  <div class="blk h2b">
+    <div class="stat"><b>9.48</b>CGPA, AI &amp; Data Science</div>
+    <div class="stat"><b>1+ yr</b>Analytics at Habeeb Engineers</div>
+    <div class="stat"><b>3</b>Internships · 1 publication</div>
+  </div>
+</header>
+
+<h2 id="case"><span>Case study 01</span>Debt-recovery analytics dashboard</h2>
+<p class="mu">A simulated portfolio of 12,000 accounts across 4 banks, Jan to Jun 2026, built to mirror what a collections analytics team handles. All data is generated for demonstration. Click any filter, bar or heatmap cell and everything recalculates.</p>
+<div class="ctl" id="ctl"></div>
+<div class="g" id="kp"></div>
+<div class="g" style="margin-top:14px">
+  <div class="card"><b>Recovery rate by month</b><svg id="mo" viewBox="0 0 300 150" width="100%"></svg></div>
+  <div class="card"><b>Collections funnel</b><div id="fn"></div></div>
+  <div class="card"><b>Recovery by bank</b><span class="mu"> (click to filter)</span><div id="bk"></div></div>
+  <div class="card"><b>Best time to call</b><span class="mu"> (click a cell)</span><table class="hm" id="hm"></table></div>
+</div>
+<div class="ins" id="ins"></div>
+
+<h2 id="exp"><span>Case study 02</span>Experiment: morning call + SMS vs standard script</h2>
+<p class="mu">Accounts from Apr to Jun were randomly assigned to each approach. Metric: share of accounts that paid. Respects the filters above.</p>
+<div class="exp" id="ex"></div>
+<p class="mu" id="exn"></p>
+
+<h2 id="dq"><span>Case study 03</span>Data quality: invoice validator</h2>
+<p class="mu">The validation step I run before reporting, in miniature. Unknown currencies, bad amounts and duplicates stop the run instead of passing silently.</p>
+<div class="card"><textarea id="ta">INV-101, 12500, AED
+INV-102, 8200, USD
+INV-102, 8200, USD
+INV-103, , INR
+INV-104, 9750, XYZ
+INV-105, -300, EUR</textarea>
+<button class="btn" id="vb">Validate</button><div class="res" id="vr"></div></div>
+
+<h2 id="work"><span>Experience</span>Where I have worked</h2>
+<div class="tl">
+  <div><b>Data Analyst, Habeeb Engineers · Jul 2025 – Present</b><div class="mu">Excel, SQL and Power BI to clean, organise and analyse business data and build reports and dashboards that support decisions. Data is checked for errors and inconsistencies before reporting so the figures can be trusted.</div></div>
+  <div><b>Software Developer Intern, Honeywell · Jan – Jul 2025</b><div class="mu">Redesigned CoreGT UI with Material UI for scalability and performance. Queried databases and APIs and checked the data shown in the UI against the source. Prepared test data and ran testing and validation with Selenium and Katalon. Built Excel reports and dashboards for the team.</div></div>
+  <div><b>Machine Learning Intern, CognoRise Infotech · May – Jun 2024</b><div class="mu">Diabetes and spam prediction models with preprocessing and classification.</div></div>
+  <div><b>Trainee &amp; Intern, WE Hub (Govt. of Telangana) · Oct 2023 – Feb 2024</b><div class="mu">Computer-vision sign language translation system.</div></div>
+</div>
+
+<h2 id="proj"><span>Projects &amp; skills</span>More work</h2>
+<div class="g">
+  <div class="card proj" style="border-top-color:var(--d)"><h3>Sales Performance Dashboard</h3><div class="mu">Power BI · SQL · Excel</div><ul><li>Power Query cleaning, DAX KPIs</li><li>Regional and monthly trends</li></ul></div>
+  <div class="card proj" style="border-top-color:var(--e)"><h3>Customer Churn Analysis</h3><div class="mu">Python · SQL · Tableau</div><ul><li>EDA and churn drivers</li><li>Classification model</li></ul></div>
+  <div class="card proj" style="border-top-color:var(--c)"><h3>GAN Text-to-Video + Survey Paper</h3><div class="mu">Python · TensorFlow</div><ul><li>Published in IJCRT, March 2025</li></ul></div>
+  <div class="card proj" style="border-top-color:var(--b)"><h3>Sign Language Translation</h3><div class="mu">Python · OpenCV</div><ul><li>Real-time gesture recognition</li></ul></div>
+</div>
+<div class="sk card" style="margin-top:14px"><span style="background:var(--c)">Excel</span><span style="background:var(--a)">SQL</span><span style="background:var(--d);color:#2a2000">Power BI</span><span style="background:var(--e)">Python</span><span style="background:var(--b)">Tableau</span><span style="background:var(--tx);color:var(--bg)">DAX</span><span style="background:var(--tx);color:var(--bg)">Power Query</span><span style="background:var(--tx);color:var(--bg)">Data Cleaning</span><span style="background:var(--tx);color:var(--bg)">EDA</span></div>
+
+<h2 id="learn"><span>Interests &amp; learning</span>What I’m exploring next</h2>
+<div class="g">
+  <div class="card proj" style="border-top-color:var(--e)"><h3>Interests</h3><div class="sk"><span style="background:var(--e)">Generative AI</span><span style="background:var(--a)">LLMs</span><span style="background:var(--b)">Claude (Anthropic)</span><span style="background:var(--c)">Agentic AI</span><span style="background:var(--d);color:#2a2000">AI on the Cloud</span></div></div>
+  <div class="card proj" style="border-top-color:var(--c)"><h3>Currently learning</h3><div class="sk"><span style="background:var(--tx);color:var(--bg)">Prompt Engineering</span><span style="background:var(--tx);color:var(--bg)">Cloud AI platforms</span><span style="background:var(--tx);color:var(--bg)">Microsoft Fabric</span><span style="background:var(--tx);color:var(--bg)">Databricks</span><span style="background:var(--tx);color:var(--bg)">Advanced SQL</span><span style="background:var(--tx);color:var(--bg)">MLOps</span></div></div>
+</div>
+
+<h2 id="contact"><span>Contact</span>Let’s talk</h2>
+<a class="btn" href="mailto:mariyaizrar136@gmail.com" target="_blank" rel="noopener">Email</a><button class="btn o" id="cp" style="color:var(--tx)">Copy email</button><p class="mu">mariyaizrar136@gmail.com</p><a class="btn" href="https://linkedin.com/in/mariya-a51319265">LinkedIn</a><a class="btn" href="https://github.com/Mariyaaleem">GitHub</a>
+<p class="mu" style="margin-top:14px"><b>Languages:</b> English · Hindi · Urdu · Arabic (Basic)</p>
+<footer>Google Data Analytics Professional Certificate · Cisco Python Essentials · NPTEL Machine Learning · B.E. AI &amp; Data Science, Stanley College (2021–2025)</footer>
+</div>
+<script>
+var seed=42;function R(){seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296}
+var BK=["Gulf Bank A","Emirates B","Atlas C","Meridian D"],SL=["Morning","Afternoon","Evening"],TK=["Small","Medium","Large"],MO=["Jan","Feb","Mar","Apr","May","Jun"];
+var bb=[.62,.55,.68,.48],sb=[1.2,1,.8],tb=[1.1,1,.7],D=[];
+for(var i=0;i<12000;i++){var b=Math.floor(R()*4),s=Math.floor(R()*3),t=Math.floor(R()*3),m=Math.floor(R()*6);
+var amt=[400,2500,12000][t]*(.6+R()*.8),con=R()<Math.min(.9,bb[b]*sb[s]*1.05),pr=con&&R()<.58,v=R()<.5,pb=Math.min(.95,.62*tb[t]*(m>2&&v?1.18:1)),pd=pr&&R()<pb;
+D.push({b:b,s:s,t:t,m:m,a:amt,c:con,p:pr,d:pd,r:pd?amt*(.55+R()*.45):0,v:m>2?(v?1:0):-1})}
+var F={b:-1,s:-1,t:-1};
+function sub(x){return D.filter(function(a){return(x===undefined||x.indexOf("b")>=0||1)&&(F.b<0||a.b===F.b)&&(F.s<0||a.s===F.s)&&(F.t<0||a.t===F.t)})}
+function agg(L){var o={n:L.length,c:0,p:0,d:0,A:0,Rv:0};L.forEach(function(a){o.A+=a.a;o.Rv+=a.r;if(a.c)o.c++;if(a.p)o.p++;if(a.d)o.d++});o.rate=o.A?o.Rv/o.A:0;return o}
+function pct(x){return(x*100).toFixed(1)+"%"}
+function ctl(){var h="";[["Bank",BK,"b"],["Call slot",SL,"s"],["Ticket size",TK,"t"]].forEach(function(g){h+="<div><label>"+g[0]+"</label><button class='f"+(F[g[2]]<0?" on":"")+"' data-k='"+g[2]+"' data-v='-1'>All</button>";g[1].forEach(function(n,i){h+="<button class='f"+(F[g[2]]===i?" on":"")+"' data-k='"+g[2]+"' data-v='"+i+"'>"+n+"</button>"});h+="</div>"});document.getElementById("ctl").innerHTML=h}
+function render(){ctl();var L=sub(),T=agg(L);
+document.getElementById("kp").innerHTML=[["Accounts",T.n.toLocaleString()],["Assigned (USD)","$"+Math.round(T.A/1000).toLocaleString()+"k"],["Recovered (USD)","$"+Math.round(T.Rv/1000).toLocaleString()+"k"],["Recovery rate",pct(T.rate)]].map(function(k){return"<div class='card kpi'><span class='mu'>"+k[0]+"</span><b>"+k[1]+"</b></div>"}).join("");
+var mr=MO.map(function(_,i){return agg(L.filter(function(a){return a.m===i})).rate}),mx=Math.max.apply(null,mr)||1,sv="";
+mr.forEach(function(r,i){var h=r/mx*100;sv+="<rect x='"+(i*50+10)+"' y='"+(120-h)+"' width='32' height='"+h+"' rx='6' fill='var(--a)'/><text x='"+(i*50+26)+"' y='"+(112-h)+"' text-anchor='middle' font-size='10' fill='var(--tx)'>"+pct(r)+"</text><text x='"+(i*50+26)+"' y='140' text-anchor='middle' font-size='11' fill='var(--mu)'>"+MO[i]+"</text>"});document.getElementById("mo").innerHTML=sv;
+var fn=[["Assigned",T.n],["Contacted",T.c],["Promised",T.p],["Paid",T.d]],fh="";fn.forEach(function(f,i){fh+="<div class='row' style='cursor:default'><span>"+f[0]+"</span><div class='tr'><i style='width:"+(T.n?f[1]/T.n*100:0)+"%;background:var(--"+["a","e","d","c"][i]+")'></i></div><span>"+f[1]+"</span></div>"});document.getElementById("fn").innerHTML=fh;
+var save=F.b,bh="";BK.forEach(function(n,i){F.b=-1;var x=agg(D.filter(function(a){return a.b===i&&(F.s<0||a.s===F.s)&&(F.t<0||a.t===F.t)}));bh+="<div class='row"+(save===i?" sel":"")+"' data-bank='"+i+"'><span class='lb'>"+n+"</span><div class='tr'><i style='width:"+Math.min(100,x.rate*180)+"%;background:var(--b)'></i></div><span>"+pct(x.rate)+"</span></div>"});F.b=save;document.getElementById("bk").innerHTML=bh;
+var hm="<tr><th></th>"+TK.map(function(t){return"<th>"+t+"</th>"}).join("")+"</tr>",best=[0,0,-1];SL.forEach(function(sn,s){hm+="<tr><th>"+sn+"</th>";TK.forEach(function(_,t){var x=agg(D.filter(function(a){return a.s===s&&a.t===t&&(F.b<0||a.b===F.b)}));if(x.rate>best[2])best=[s,t,x.rate];hm+="<td><div data-s='"+s+"' data-t='"+t+"' class='"+(F.s===s&&F.t===t?"sel":"")+"' style='background:rgba(47,91,234,"+(.12+Math.min(.8,x.rate*1.1))+");color:"+(x.rate>.3?"#fff":"inherit")+"'>"+pct(x.rate)+"</div></td>"});hm+="</tr>"});document.getElementById("hm").innerHTML=hm;
+document.getElementById("ins").innerHTML="<b>What this view tells us</b><br>Across the current selection, recovery is "+pct(T.rate)+" of assigned value. The strongest cell in the heatmap is <b>"+SL[best[0]]+" calls on "+TK[best[1]].toLowerCase()+" tickets ("+pct(best[2])+")</b>, so call capacity is best prioritised there first. Because the data is simulated, treat this as a demonstration of method, not a real finding.";
+var C=agg(L.filter(function(a){return a.v===0})),V=agg(L.filter(function(a){return a.v===1})),p1=C.d/(C.n||1),p2=V.d/(V.n||1),pp=(C.d+V.d)/((C.n+V.n)||1),se=Math.sqrt(pp*(1-pp)*(1/(C.n||1)+1/(V.n||1))),z=se?(p2-p1)/se:0,pv=2*(1-cdf(Math.abs(z)));
+document.getElementById("ex").innerHTML="<div class='card'><span class='mu'>Standard script (n="+C.n+")</span><b>"+pct(p1)+"</b></div><div class='card'><span class='mu'>Morning call + SMS (n="+V.n+")</span><b style='color:var(--c)'>"+pct(p2)+"</b></div>";
+document.getElementById("exn").textContent="Lift: "+((p2-p1)*100).toFixed(1)+" percentage points · z = "+z.toFixed(2)+" · p-value "+(pv<.001?"< 0.001":pv.toFixed(3))+(pv<.05?" (statistically significant at 5%)":" (not significant at 5%, so more data is needed)")}
+function cdf(z){var t=1/(1+.2316419*z),d=.3989423*Math.exp(-z*z/2),p=d*t*(.3193815+t*(-.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return 1-p}
+document.addEventListener("click",function(e){var t=e.target,r=t.closest("[data-bank]"),h=t.closest("[data-s]");
+if(t.dataset&&t.dataset.k){F[t.dataset.k]=+t.dataset.v;render()}
+else if(r){var v=+r.dataset.bank;F.b=F.b===v?-1:v;render()}
+else if(h){var s=+h.dataset.s,k=+h.dataset.t;if(F.s===s&&F.t===k){F.s=-1;F.t=-1}else{F.s=s;F.t=k}render()}});
+render();
+document.getElementById("cp").onclick=function(){var m="mariyaizrar136@gmail.com",b=this;function ok(){b.textContent="Copied!";setTimeout(function(){b.textContent="Copy email"},1800)}try{navigator.clipboard.writeText(m).then(ok,fb)}catch(e){fb()}function fb(){try{var t=document.createElement("textarea");t.value=m;document.body.appendChild(t);t.select();document.execCommand("copy");document.body.removeChild(t);ok()}catch(e){b.textContent=m}}};
+var CUR=["AED","USD","INR","EUR","GBP","SAR"];
+document.getElementById("vb").onclick=function(){var seen={},h="";document.getElementById("ta").value.split("\n").forEach(function(l){if(!l.trim())return;var p=l.split(",").map(function(x){return x.trim()}),e=[];
+if(seen[p[0]])e.push("duplicate ID");seen[p[0]]=1;
+if(p[1]===""||isNaN(+p[1]))e.push("missing or non-numeric amount");else if(+p[1]<0)e.push("negative amount");
+if(CUR.indexOf((p[2]||"").toUpperCase())<0)e.push("unknown currency '"+(p[2]||"")+"'");
+h+="<div class='"+(e.length?"er":"ok")+"'>"+p[0]+": "+(e.length?"STOP: "+e.join("; "):"passed")+"</div>"});document.getElementById("vr").innerHTML=h};
+</script>
+</body>
+</html>
